@@ -9,5 +9,5 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
-  export { default as ContactList } from "./ContactList"
+  
   

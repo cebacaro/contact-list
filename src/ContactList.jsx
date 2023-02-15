@@ -1,28 +1,26 @@
-import React, {useState} from 'react'
-import dummyContacts from "./dummyData"
+import React from "react";
 
-const ContactList = () => {
-    const [contacts, setContacts] = useState(dummyContacts)
-    return(
-        <table>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-            </tr>
-            {
-              contacts.map(contact => {
-                return <tr key={contact.id}>
-                    <td>{contact.name}</td>
-                    <td>{contact.phone}</td>
-                    <td>{contact.email}</td>
-                  </tr>
-              })
-            }
-          </tbody>
-        </table>
-    )
-}
+const ContactList = (props) => {
+  return (
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+        {props.contacts.map((contact) => {
+          return <tr key={contact.id}>
+            <td>{contact.name}</td>
+            <td>{contact.phone}</td>
+            <td>{contact.email}</td>
+          </tr>;
+        })
+      }
+      {console.log(props.contacts)}
+      </tbody>
+    </table>
+  );
+};
 
-export default ContactList
+export default ContactList;
