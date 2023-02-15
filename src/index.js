@@ -1,20 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Main} from './components'
+import {ContactList} from './ContactList'
 
-const Main = () => {
-  return (
-    <div id="main">
-      <div id="navbar">
-        <div>Contact List</div>
-      </div>
-      <div id="container">
-        {/* your components here */}
-      </div>
-    </div>
-  );
-}
 
 ReactDOM.render(
   <Main />,
   document.getElementById('app')
 );
+
+  export { default as ContactList } from "./ContactList"
+  
